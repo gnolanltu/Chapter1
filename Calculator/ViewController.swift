@@ -9,7 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var aTextField: UITextField!
+    @IBOutlet weak var bTextField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    let resCalc = Calculator(a:1,b:1)
+    
+    @IBAction func calculateTapped(_ sender: UIButton) {
+        resultLabel.text = String(resCalc.add(a: Int((aTextField.text! as NSString).intValue),
+                                              b:Int((bTextField.text! as NSString).intValue)))
 
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
