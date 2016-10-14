@@ -10,13 +10,9 @@ import Foundation
 
 class Calculator {
     
-    var a: Int
-    var b: Int
+    var a: Int!
+    var b: Int!
     
-    init(a:Int, b:Int){
-        self.a = a
-        self.b = b
-    }
     
     func add(a:Int, b:Int) -> Int {
         return a + b

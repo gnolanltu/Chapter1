@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
-    let resCalc = Calculator(a:1,b:1)
+    let resCalc = Calculator()
     
     @IBAction func calculateTapped(_ sender: UIButton) {
         resultLabel.text = String(resCalc.add(a: Int((aTextField.text! as NSString).intValue),
